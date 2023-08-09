@@ -1,17 +1,32 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        String result=Walk(34, 27);
+        System.out.println(result);
+        result=Walk(13, 30);
+        System.out.println(result);
+        result=Walk(47, 12);
+        System.out.println(result);
+        result=Walk(32, -34);
+        System.out.println(result);
+        result=Walk(50, 14);
+        System.out.println(result);
+    }
+    public static String Walk(int age, int temperature) {
+        if (age >= 20 && age <= 45) {
+            if (temperature > -20 && temperature < 30) {
+                return  "Можно идти гулять";
+            }
+        } else if (age < 20) {
+            if (temperature > 0 && temperature < 28) {
+                return "Можно идти гулять";
+            }
+        } else if (age > 45) {
+            if (temperature > -10 && temperature < 25) {
+                return  "Можно идти гулять";
+            }
+        } else {
+            return "Остовайтесь дома";
         }
+        return "Остовайтесь дома";
     }
 }
